@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-labelledby="title description">
+  <title id="title">Figures beneath a moon</title>
+  <desc id="description">Two abstract silhouettes stand beneath a large yellow moon in a blue landscape.</desc>
+  <rect width="480" height="340" fill="#4d7cff"/>
+  <circle cx="338" cy="95" r="63" fill="#e5ff4f"/>
+  <path d="M0 250c90-52 150-41 232 0 74 37 144 42 248-1v91H0z" fill="#ff6b9b"/>
+  <path d="M159 269c-5-81 5-132 35-132s41 51 33 132z" fill="#171722"/>
+  <circle cx="193" cy="116" r="29" fill="#171722"/>
+  <path d="M254 270c-4-65 6-106 31-106 27 0 36 41 31 106z" fill="#171722"/>
+  <circle cx="285" cy="145" r="24" fill="#171722"/>
+  <path d="M213 196c22 5 36 8 58-2" fill="none" stroke="#171722" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What I Eat</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffe0a3, #ff9a3c);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .food-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .food-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      width: 200px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .food-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .food-card h3 {
+      margin: 8px 0 4px 0;
+      color: #b95c00;
+    }
+
+    .food-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="diary.html" class="back-link">&larr; Back to Diary</a>
+  <h1>What I Eat 🍜</h1>
+
+  <div class="food-list">
+
+    <div class="food-card">
+      <img src="assets/food1.jpg" alt="Food photo">
+      <h3>Ramen</h3>
+      <p>My go-to comfort food on a rainy day.</p>
+    </div>
+
+    <div class="food-card">
+      <img src="assets/food2.jpg" alt="Food photo">
+      <h3>Bingsoo</h3>
+      <p>Tried a new dessert place this week!</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

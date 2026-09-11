@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Welcome to Pineapple World</title>
+    <style>
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #8fd6f0, #1c7fb0);
+      position: relative;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .fish {
+      position: absolute;
+      width: 400px;        
+      top: 200px;  
+      left: -120px; 
+      animation: swim 8s linear infinite;
+    }
+
+    .pineapple {
+    position: absolute;
+    width: 500px; 
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+
+    @keyframes swim {
+      0%   { left: -120px; top: 300px; }
+     20%  { left: 15%;    top: 120px; }
+     40%  { left: 40%;    top: 380px; }
+     60%  { left: 65%;    top: 180px; }
+     80%  { left: 90%;    top: 320px; }
+     100% { left: 110%;   top: 200px; }
+    }
+
+    .water-bubble {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: inset -8px -8px 15px rgba(255,255,255,0.4),
+                inset 8px 8px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    animation: bubble-fade 4s ease-in-out infinite;
+    }
+    .bubble2 { top: 520px; left: 650px; animation-delay: 1s; }
+    .bubble3 { top: 180px; left: 500px; animation-delay: 2s; }
+    
+    @keyframes bubble-fade {
+    0%   { opacity: 0;   transform: scale(0.8) translateY(20px); }
+    15%  { opacity: 1;   transform: scale(1)   translateY(0); }
+    70%  { opacity: 1;   transform: scale(1)   translateY(-10px); }
+    100% { opacity: 0;   transform: scale(0.9) translateY(-30px); }
+    }
+
+    .back-link {
+     position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 10;
+    }
+    .back-link:hover {
+    text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to Pineapple World</h1>
+  <img src="assets/fish.png" alt="My fish" class="fish">
+  <img src="assets/pineapple.png" alt="My pineapple" class="pineapple">
+  <div class="water-bubble">This is hot kid</div>
+  <div class="water-bubble bubble2">Males betta fish will flare their fins when they see a rival.</div>
+  <div class="water-bubble bubble3">Bettas can breathe air at the surface, not just water!</div>
+  <a href="diary.html" class="back-link">&larr; Back to Diary</a>
+</body>
+</html>
