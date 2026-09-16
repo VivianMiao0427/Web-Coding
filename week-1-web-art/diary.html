@@ -25,6 +25,7 @@
       gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: flex-start;
     }
 
     .entry-card {
@@ -36,14 +37,15 @@
       text-align: center;
       text-decoration: none;
       color: #1c7fb0;
+      width: 260px;
       font-weight: bold;
       font-size: 18px;
       box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.2s ease;
-        display: flex;
-  flex-direction: column;
-  justify-content: flex-end;  
-  height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;  
+      height: 180px;
     }
 
     .entry-card:hover {
@@ -51,11 +53,11 @@
     }
 
     .entry-card img {
-      width: 100px;
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
       margin-bottom: 10px;
-      height: 80px;           
-      object-fit: contain; 
-     margin-bottom: 10px;
     }
   </style>
 </head>
@@ -66,14 +68,18 @@
   <div class="entries">
 
     <a href="home.html" class="entry-card">
-      <img src="assets/fish.png" alt="Fish icon">
+      <img src="assets/hotkid.jpg" alt="Fish icon">
       My Fish
     </a>
 
     <a href="food.html" class="entry-card">
-      🍜
-      <br>
+      <img src="assets/girleat.jpg" alt="My photo">
       What I Eat
+    </a>
+
+    <a href="volunteer.html" class="entry-card">
+      <img src="assets/shelter.jpeg" alt="shelter photo">
+      Volunteer
     </a>
 
   </div>
