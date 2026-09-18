@@ -1,133 +1,88 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A quiet, interactive digital still life about the traces we leave behind online."
-    />
-    <title>A Quiet Tab Left Open</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Diary</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #8fd6f0, #1c7fb0);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-  <body id="top">
-    <div class="grain" aria-hidden="true"></div>
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-    <header class="page-header">
-      <p class="eyebrow">a small internet still life / 02:03 pm</p>
-      <h1><span>A Quiet Tab</span><span>Left Open</span></h1>
-      <p class="intro">
-        The room is empty, but the browser is still awake.
-        <span>Touch the objects to see what they remember.</span>
-      </p>
-    </header>
+    .entries {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-    <main>
-      <section class="room" aria-label="An interactive desk beside a window">
-        <div class="wall-note note-one" aria-hidden="true">DON'T<br />FORGET</div>
-        <div class="wall-note note-two" aria-hidden="true">one more<br />minute...</div>
+    .entry-card {
+      display: block;
+      width: 220px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #1c7fb0;
+      width: 260px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;  
+      height: 180px;
+    }
 
-        <div class="window" aria-hidden="true">
-          <div class="sky">
-            <span class="sun"></span>
-            <span class="cloud cloud-one"></span>
-            <span class="cloud cloud-two"></span>
-            <div class="city">
-              <span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
-          </div>
-          <div class="window-bar vertical"></div>
-          <div class="window-bar horizontal"></div>
-        </div>
+    .entry-card:hover {
+      transform: translateY(-6px);
+    }
 
-        <button
-          class="memory-object lamp"
-          type="button"
-          data-memory="The lamp remembers every night you promised would end early."
-          aria-label="Turn the desk lamp on or off"
-          aria-pressed="false"
-        >
-          <span class="lamp-shade"></span>
-          <span class="lamp-neck"></span>
-          <span class="lamp-base"></span>
-          <span class="light-cone" aria-hidden="true"></span>
-        </button>
+    .entry-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
 
-        <div class="desk" aria-hidden="true"></div>
+  <h1>Welcome to My Diary</h1>
 
-        <button
-          class="memory-object laptop"
-          type="button"
-          data-memory="The tab remembers the question you were too tired to finish."
-          aria-label="Open the laptop's memory"
-        >
-          <span class="screen">
-            <span class="browser-bar">
-              <i></i><i></i><i></i>
-              <b>somewhere.online/unfinished</b>
-            </span>
-            <span class="screen-copy">
-              <em>ARE YOU<br />STILL THERE?</em>
-              <span class="blink">_</span>
-            </span>
-          </span>
-          <span class="keyboard"></span>
-        </button>
+  <div class="entries">
 
-        <button
-          class="memory-object mug"
-          type="button"
-          data-memory="The cup remembers the heat, but not the hands that held it."
-          aria-label="Read the mug's memory"
-        >
-          <span class="steam steam-one"></span>
-          <span class="steam steam-two"></span>
-          <span class="cup-body"></span>
-          <span class="cup-handle"></span>
-        </button>
+    <a href="home.html" class="entry-card">
+      <img src="assets/hotkid.jpg" alt="Fish icon">
+      My Fish
+    </a>
 
-        <button
-          class="memory-object photograph"
-          type="button"
-          data-memory="The photograph insists this happened exactly as shown."
-          aria-label="Read the photograph's memory"
-        >
-          <img src="assets/memory.svg" alt="Abstract silhouettes beneath a yellow moon" />
-          <span>US, BEFORE THE PAGE LOADED</span>
-        </button>
+    <a href="food.html" class="entry-card">
+      <img src="assets/girleat.jpg" alt="My photo">
+      What I Eat
+    </a>
 
-        <button
-          class="memory-object phone"
-          type="button"
-          data-memory="The phone remembers three unsent messages and one accidental goodbye."
-          aria-label="Read the phone's memory"
-        >
-          <span class="phone-speaker"></span>
-          <span class="notification">3</span>
-          <span class="phone-line"></span>
-          <span class="phone-line short"></span>
-        </button>
+    <a href="volunteer.html" class="entry-card">
+      <img src="assets/shelter.jpeg" alt="shelter photo">
+      Volunteer
+    </a>
 
-        <div class="cable" aria-hidden="true"></div>
-      </section>
+  </div>
 
-      <section class="memory-panel" aria-live="polite">
-        <p class="memory-number">memory no. <span id="memory-number">00</span></p>
-        <p class="memory-text" id="memory-text">
-          The room is waiting. Choose an object.
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <p>
-        This page will close when you do.
-        <a href="#top" id="begin-again">begin again ↗</a>
-      </p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
